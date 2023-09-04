@@ -3,11 +3,31 @@ const input = document.querySelectorAll("table input");
 const button = document.querySelector("button");
 
 button.addEventListener("click", (e) => {
-  let answer = "";
-  input.forEach((input) => (answer += input.value + ","));
+  let answer = [...Array(10)].map(() => new Array(10));
+  console.log(answer);
+  input.forEach((input, i) => (answer[parseInt(i / 10)][i % 10] = input.value));
   console.log(answer);
   input.forEach((input) => (input.value = ""));
+  downloadTemplate(answer);
 });
+function downloadTemplate(csv) {
+  let filename = "sample.csv";
+
+  const BOM = "\uFEFF";
+
+  csv = BOM + csv.join("\n");
+
+  let csvFile = new Blob([csv], { type: "text/csv" });
+
+  downloadLink = document.createElement("a");
+  downloadLink.download = filename;
+  downloadLink.href = window.URL.createObjectURL(csvFile);
+  downloadLink.style.display = "none";
+
+  document.body.appendChild(downloadLink);
+
+  downloadLink.click();
+}
 
 document.querySelectorAll("table input").forEach((input) => {
   input.addEventListener("focus", (e) => {

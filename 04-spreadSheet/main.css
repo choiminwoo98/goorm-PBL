@@ -1,6 +1,7 @@
 table {
   border-collapse: collapse;
   width: 100%;
+  display: flex;
 }
 
 table {
@@ -21,13 +22,13 @@ td:first-child {
 }
 th,
 td {
-  padding: 0;
+  padding-right: 3px;
   vertical-align: middle;
 }
 input {
   border: 0px solid;
   height: 30px;
-  width: 96%;
+  width: 100%;
 }
 input:focus {
   outline: none;
@@ -35,4 +36,12 @@ input:focus {
 .highlight {
   background-color: #aed8e6; /* 원하는 배경색으로 변경 */
   color: white;
+}
+
+button {
+  background-color: #08ab47;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
