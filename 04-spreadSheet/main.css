@@ -1,0 +1,38 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table {
+  border: 2px solid #d9d9d9;
+}
+
+th {
+  background-color: #dedede;
+  border: 2px solid #d9d9d9;
+}
+
+td {
+  border: 2px solid #d9d9d9;
+  background-color: #dedede;
+}
+td:first-child {
+  text-align: center;
+}
+th,
+td {
+  padding: 0;
+  vertical-align: middle;
+}
+input {
+  border: 0px solid;
+  height: 30px;
+  width: 96%;
+}
+input:focus {
+  outline: none;
+}
+.highlight {
+  background-color: #aed8e6; /* 원하는 배경색으로 변경 */
+  color: white;
+}
