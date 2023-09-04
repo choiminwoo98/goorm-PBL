@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <title>Document</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="searchBox">
+        <h1>Search GitHub Users</h1>
+        <h5 style="color: gray">
+          Enter username to fetch a user profile and repos
+        </h5>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="GitHub Username.."
+          onchange="search()"
+        />
+      </div>
+      <div id="resultWrapper">
+        <div class="result">
+          <div class="left">
+            <img class="image" />
+            <a href="" id="button">View Profile</a>
+          </div>
+          <div class="right">
+            <div class="list1">
+              <span
+                id="publicRepo"
+                class="badge"
+                style="background-color: #4582ec"
+                >Public Repositories: 24</span
+              ><span
+                id="publicGists"
+                class="badge"
+                style="background-color: #adb5bd"
+                >Public Gists: 0</span
+              ><span
+                id="Followers"
+                class="badge"
+                style="background-color: #02b875"
+                >Followers: 0</span
+              ><span
+                id="Following"
+                class="badge"
+                style="background-color: #17a2b8"
+                >Followers: 0</span
+              >
+            </div>
+            <ul style="padding: 0px; border-bottom: 2px solid #f3f3f3">
+              <li id="Company" style="justify-content: left">h</li>
+              <li id="WebSite" style="justify-content: left">h</li>
+              <li id="Location" style="justify-content: left">h</li>
+              <li id="MemberSince" style="justify-content: left">h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="resultWrapper2">
+        <ul
+          id="repoul"
+          style="
+            padding: 0px;
+            border-bottom: 2px solid #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+          "
+        ></ul>
+      </div>
+    </div>
+  </body>
+</html>
