@@ -1,0 +1,20 @@
+.Wrapper {
+  display: flex;
+  height: 1000px;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #e9b872;
+}
+
+.box {
+  background-color: white;
+  color: aqua;
+}
+
+input {
+  border: none;
+  padding: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dcdad9;
+  outline: none;
+}
